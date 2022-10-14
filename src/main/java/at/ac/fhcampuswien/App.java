@@ -87,10 +87,9 @@ public class App {
         System.out.print("h: ");
         int h = input.nextInt();
         System.out.print("c: ");
-        char c = input.next().charAt(0);
-        char cx = c;
+        // char w = input.next().charAt(0);
+        int s;
 
-        int s = 0;
         int col = 1;
         int space = h/2;
 
@@ -102,22 +101,26 @@ public class App {
              }
              if (i < h / 2 + 1) {
                  s = i;
+
                  space = space - 1;
              } else {
                  s = ((h + 1) - i);
                  space = space + 1;
              }
              for (int j = 1; j <= col; j++) {
-                 int mid = col / 2;
-                 System.out.print(c);
+                 int mid = (col / 2) +1;
+                 System.out.print(s);
 
                  if (j < mid) {
-                     c--;
+                     s--;
+                 } else{
+                     s++;
+
                  }
 
              }
              System.out.println();
-             if (i < h / 2 + 1) {
+             if (i < (h / 2) + 1) {
                  col = col + 2;
              } else {
                  col = col - 2;
